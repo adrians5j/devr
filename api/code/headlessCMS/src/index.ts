@@ -13,6 +13,9 @@ import logsPlugins from "@webiny/handler-logs";
 // Imports plugins created via scaffolding utilities.
 import scaffoldsPlugins from "./plugins/scaffolds";
 
+// Extending the GraphQL schema with topics-related fields.
+import topicsPlugins from "./plugins/topics";
+
 const debug = process.env.DEBUG === "true";
 
 export const handler = createHandler({
@@ -35,7 +38,8 @@ export const handler = createHandler({
         i18nContentPlugins(),
         headlessCmsPlugins({ debug }),
         headlessCmsDynamoDbElasticStorageOperation(),
-        scaffoldsPlugins()
+        scaffoldsPlugins(),
+        topicsPlugins
     ],
     http: { debug }
 });

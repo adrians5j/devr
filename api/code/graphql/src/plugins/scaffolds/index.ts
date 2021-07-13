@@ -1,4 +1,4 @@
 // This file is automatically updated via various scaffolding utilities.
-import books from "./books";
+import carManufacturers from "./carManufacturers";
 
-export default () => [books];
+export default () => [carManufacturers];
