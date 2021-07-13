@@ -1,9 +1,9 @@
-import { BooksContext } from "../types";
+import { CarManufacturersContext } from "../types";
 
-export default class BookMutationResolver {
-    protected readonly context: BooksContext;
+export default class CarManufacturerMutationResolver {
+    protected readonly context: CarManufacturersContext;
 
-    constructor(context: BooksContext) {
+    constructor(context: CarManufacturersContext) {
         this.context = context;
     }
 
@@ -11,7 +11,7 @@ export default class BookMutationResolver {
      * Generates primary key (PK), to be used upon mutating / querying DynamoDB data.
      * @param base
      */
-    getPK(base = "Book") {
+    getPK(base = "CarManufacturer") {
         // By default, Webiny Admin Area supports content creation in multiple locales.
         // The prepended "L#${locale}" designates to which locale our data belongs to.
         const locale = this.context.i18nContent.getLocale().code;

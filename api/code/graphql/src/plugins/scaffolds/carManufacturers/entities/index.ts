@@ -1,5 +1,5 @@
 export { default as table } from "./table";
-export { default as Book } from "./Book";
+export { default as CarManufacturer } from "./CarManufacturer";
 
 /**
  * This folder contains all of the entities that you might need in your application.

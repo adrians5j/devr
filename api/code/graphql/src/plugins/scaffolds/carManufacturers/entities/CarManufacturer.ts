@@ -1,15 +1,15 @@
 // https://github.com/jeremydaly/dynamodb-toolbox
 import { Entity } from "dynamodb-toolbox";
 import table from "./table";
-import { BookEntity } from "../types";
+import { CarManufacturerEntity } from "../types";
 
 /**
- * Once we have the table, we define the BookEntity entity.
+ * Once we have the table, we define the CarManufacturerEntity entity.
  * If needed, additional entities can be defined using the same approach.
  */
-export default new Entity<BookEntity>({
+export default new Entity<CarManufacturerEntity>({
     table,
-    name: "Book",
+    name: "CarManufacturer",
     timestamps: false,
     attributes: {
         PK: { partitionKey: true },

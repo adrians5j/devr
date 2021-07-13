@@ -1,5 +1,5 @@
 import { GraphQLSchemaPlugin } from "@webiny/handler-graphql/plugins/GraphQLSchemaPlugin";
-import { BooksContext } from "./types";
+import { CarManufacturersContext } from "./types";
 import typeDefs from "./typeDefs";
 import resolvers from "./resolvers";
 
@@ -9,17 +9,17 @@ import resolvers from "./resolvers";
  * define how we want to expand the existing GraphQL schema and the resolver functions.
  * To learn more, open the imported `typeDefs` and `resolvers` files.
  */
-export default new GraphQLSchemaPlugin<BooksContext>({
+export default new GraphQLSchemaPlugin<CarManufacturersContext>({
     typeDefs,
     resolvers: {
         Query: {
-            books: (_, __, context) => {
-                return new resolvers.BooksQuery(context);
+            carManufacturers: (_, __, context) => {
+                return new resolvers.CarManufacturersQuery(context);
             }
         },
         Mutation: {
-            books: (_, __, context) => {
-                return new resolvers.BooksMutation(context);
+            carManufacturers: (_, __, context) => {
+                return new resolvers.CarManufacturersMutation(context);
             }
         }
     }
